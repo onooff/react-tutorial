@@ -88,6 +88,15 @@ class Game extends React.Component {
 				  '), ' +
 				  (stepNumber % 2 ? 'X' : 'O')
 				: '게임 시작으로 이동';
+			if (stepNumber === this.state.stepNumber) {
+				return (
+					<li key={stepNumber}>
+						<button onClick={() => this.jumpTo(stepNumber)}>
+							<strong>{desc}</strong>
+						</button>
+					</li>
+				);
+			}
 			return (
 				<li key={stepNumber}>
 					<button onClick={() => this.jumpTo(stepNumber)}>{desc}</button>
