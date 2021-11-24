@@ -33,6 +33,14 @@ class Board extends React.Component {
 		const squares = this.state.squares.slice();
 		/*
 		 .slice() 사용한 이유?
+		 state의 squares를 직접 건드리지 않고 사본을 생성하기 위함. 왜???????
+		 불변성을 위해서
+		 직접 객체 변경을 하지 않고 사본으로 대체함으로써 얻는 이점
+		 - 이전 이력을 기억하는 등 로직에서 재사용 유리함
+		 - 변화 감지가 쉽다. 값만 변경했을 때는 변경된 값 확인을 위해서 전체 객체 트리를 돌아야 하지만 불변 객체임이 보장되면 객체가 바뀌면 변화로 인식하면 간단함
+		 - 렌더링 시기를 결정한다. 이게 중요한 거 같따 성능 이슈와 관련 있을 듯
+		   순수 컴포넌트?
+		   https://ko.reactjs.org/docs/optimizing-performance.html#examples
 		*/
 		squares[i] = 'X';
 		this.setState({squares: squares});
