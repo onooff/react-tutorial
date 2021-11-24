@@ -1,4 +1,7 @@
 # react-tutorial
+
+![capture](./.resource/capture.png)
+
 ~~https://ko.reactjs.org/tutorial/tutorial.html 따라해보기~~
 
 시간이 더 있거나 새로운 React 기술을 연습하고 싶은 경우 다음과 같이 난이도를 높일 수 있는 틱택토 게임 개선 아이디어를 구현해보세요.
